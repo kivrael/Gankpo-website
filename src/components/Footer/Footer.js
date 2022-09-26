@@ -1,0 +1,123 @@
+import React from 'react';
+import { Button } from '../../globalStyles';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaLinkedin
+} from 'react-icons/fa';
+import {
+  FooterContainer,
+  FooterSubscription,
+  FooterSubText,
+  FooterSubHeading,
+  Form,
+  FormInput,
+  FooterLinksContainer,
+  FooterLinksWrapper,
+  FooterLinkItems,
+  FooterLinkTitle,
+  FooterLink,
+  SocialMedia,
+  SocialMediaWrap,
+  SocialLogo,
+  SocialIcon,
+  WebsiteRights,
+  SocialIcons,
+  SocialIconLink
+} from './Footer.elements';
+
+function Footer() {
+  return (
+    <FooterContainer>
+      {/* <FooterSubscription>
+        <FooterSubHeading>
+          Join our exclusive membership to receive the latest news and trends
+        </FooterSubHeading>
+        <FooterSubText>You can unsubscribe at any time.</FooterSubText>
+        <Form>
+          <FormInput name='email' type='email' placeholder='Your Email' />
+          <Button fontBig>Subscribe</Button>
+        </Form>
+      </FooterSubscription> */}
+      <FooterLinksContainer>
+        <FooterLinksWrapper>
+          <FooterLinkItems>
+            <FooterLinkTitle>Qui Sommes-nous ?</FooterLinkTitle>
+            <FooterLinkTitle>Notre Vision</FooterLinkTitle>
+            <FooterLinkTitle>Concerts</FooterLinkTitle>
+            <FooterLink to='/'>Concerts à venir</FooterLink>
+            <FooterLink to='/'>Concerts passés</FooterLink>
+            {/* <FooterLink to='/sign-up'>How it works</FooterLink>
+            <FooterLink to='/'>Testimonials</FooterLink>
+            <FooterLink to='/'>Careers</FooterLink>
+            <FooterLink to='/'>Investors</FooterLink>
+            <FooterLink to='/'>Terms of Service</FooterLink> */}
+          </FooterLinkItems>
+          <FooterLinkItems>
+            <FooterLinkTitle>Booking</FooterLinkTitle>
+            <FooterLink to='/'>Catalogue Artistes</FooterLink>
+            <FooterLink to='/'>Catalogue Lieux Culturels</FooterLink>
+            <FooterLinkTitle>Videos</FooterLinkTitle>
+            <FooterLinkTitle>Photos</FooterLinkTitle>
+          </FooterLinkItems>
+        </FooterLinksWrapper>
+        <FooterLinksWrapper>
+          <FooterLinkItems>
+            <FooterLinkTitle>Transmission</FooterLinkTitle>
+            <FooterLink to='/'>Cours individuels</FooterLink>
+            <FooterLink to='/'>Ateliers</FooterLink>
+            <FooterLink to='/'>Master Class</FooterLink>
+            <FooterLinkTitle>Boutique</FooterLinkTitle>
+            <FooterLinkTitle>Contact</FooterLinkTitle>
+            <FooterLinkTitle>Tarification</FooterLinkTitle>
+          </FooterLinkItems>
+          <FooterLinkItems>
+            <FooterLinkTitle>Réseaux Sociaux</FooterLinkTitle>
+            <FooterLink to='/'>Instagram</FooterLink>
+            <FooterLink to='/'>Facebook</FooterLink>
+            <FooterLink to='/'>Youtube</FooterLink>
+            <FooterLink to='/'>Twitter</FooterLink>
+          </FooterLinkItems>
+        </FooterLinksWrapper>
+      </FooterLinksContainer>
+      <SocialMedia>
+        <SocialMediaWrap>
+          <SocialLogo to='/'>
+            {/* <SocialIcon /> */}
+            GANKPO
+          </SocialLogo>
+          <WebsiteRights>GANKPO © {new Date().getFullYear()} Tous droits réservés</WebsiteRights>
+          <SocialIcons>
+            <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
+              <FaFacebook />
+            </SocialIconLink>
+            <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
+              <FaInstagram />
+            </SocialIconLink>
+            <SocialIconLink
+              href='/'
+              // {
+              //   '//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber'
+              // }
+              rel='noopener noreferrer'
+              target='_blank'
+              aria-label='Youtube'
+            >
+              <FaYoutube />
+            </SocialIconLink>
+            <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
+              <FaTwitter />
+            </SocialIconLink>
+            <SocialIconLink href='/' target='_blank' aria-label='LinkedIn'>
+              <FaLinkedin />
+            </SocialIconLink>
+          </SocialIcons>
+        </SocialMediaWrap>
+      </SocialMedia>
+    </FooterContainer>
+  );
+}
+
+export default Footer;
