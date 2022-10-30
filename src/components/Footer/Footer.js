@@ -25,8 +25,11 @@ import {
   SocialIcon,
   WebsiteRights,
   SocialIcons,
-  SocialIconLink
+  SocialIconLink,
+  Logo
 } from './Footer.elements';
+import LogoImg from '../../images/logo_gankpo_seul.png';
+
 
 function Footer() {
   return (
@@ -46,9 +49,9 @@ function Footer() {
           <FooterLinkItems>
             <FooterLinkTitle>Qui Sommes-nous ?</FooterLinkTitle>
             <FooterLinkTitle>Notre Vision</FooterLinkTitle>
-            <FooterLinkTitle>Concerts</FooterLinkTitle>
-            <FooterLink to='/'>Concerts à venir</FooterLink>
-            <FooterLink to='/'>Concerts passés</FooterLink>
+            <FooterLinkTitle>Gankpo Afrobeat Session</FooterLinkTitle>
+            {/* <FooterLink to='/'>Photos</FooterLink>
+            <FooterLink to='/'>Vidéos</FooterLink> */}
             {/* <FooterLink to='/sign-up'>How it works</FooterLink>
             <FooterLink to='/'>Testimonials</FooterLink>
             <FooterLink to='/'>Careers</FooterLink>
@@ -56,24 +59,30 @@ function Footer() {
             <FooterLink to='/'>Terms of Service</FooterLink> */}
           </FooterLinkItems>
           <FooterLinkItems>
-            <FooterLinkTitle>Booking</FooterLinkTitle>
-            <FooterLink to='/'>Catalogue Artistes</FooterLink>
-            <FooterLink to='/'>Catalogue Lieux Culturels</FooterLink>
-            <FooterLinkTitle>Videos</FooterLinkTitle>
-            <FooterLinkTitle>Photos</FooterLinkTitle>
-          </FooterLinkItems>
-        </FooterLinksWrapper>
-        <FooterLinksWrapper>
-          <FooterLinkItems>
+          <FooterLinkTitle>Photos</FooterLinkTitle>
+            <FooterLinkTitle>Vidéos</FooterLinkTitle>
             <FooterLinkTitle>Transmission</FooterLinkTitle>
             <FooterLink to='/'>Cours individuels</FooterLink>
             <FooterLink to='/'>Ateliers</FooterLink>
             <FooterLink to='/'>Master Class</FooterLink>
-            <FooterLinkTitle>Boutique</FooterLinkTitle>
+          </FooterLinkItems>
+        </FooterLinksWrapper>
+        <FooterLinksWrapper>
+          <FooterLinkItems>
+          <FooterLinkTitle>Location</FooterLinkTitle>
+            <FooterLinkTitle>Bibliothèque</FooterLinkTitle>
+            {/* <FooterLink to='/'>Articles</FooterLink>
+            <FooterLink to='/'>Documentaires</FooterLink>
+            <FooterLink to='/'>Archives</FooterLink>
+            <FooterLink to='/'>Partitions</FooterLink> */}
             <FooterLinkTitle>Contact</FooterLinkTitle>
-            <FooterLinkTitle>Tarification</FooterLinkTitle>
+            <FooterLinkTitle>Booking</FooterLinkTitle>
+            <FooterLink to='/'>Catalogue Artistes</FooterLink>
+            <FooterLink to='/'>Catalogue Lieux Culturels</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
+            <FooterLinkTitle>Boutique</FooterLinkTitle>
+            <FooterLinkTitle>Tarification</FooterLinkTitle>
             <FooterLinkTitle>Réseaux Sociaux</FooterLinkTitle>
             <FooterLink to='/'>Instagram</FooterLink>
             <FooterLink to='/'>Facebook</FooterLink>
@@ -85,8 +94,9 @@ function Footer() {
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo to='/'>
+            <Logo src={LogoImg} alt={'Gankpo'}/>
             {/* <SocialIcon /> */}
-            GANKPO
+            {/* GANKPO */}
           </SocialLogo>
           <WebsiteRights>GANKPO © {new Date().getFullYear()} Tous droits réservés</WebsiteRights>
           <SocialIcons>

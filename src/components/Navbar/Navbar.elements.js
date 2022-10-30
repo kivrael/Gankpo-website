@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   background: #000;
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -16,13 +16,13 @@ export const Nav = styled.nav`
   z-index: 999;
 `;
 
-export const NavbarContainer = styled(Container)`
+export const NavbarContainer = styled.div`
+//(Container)
   font-family: 'Encode Sans Expanded';
   display: flex;
   justify-content: space-between;
   height: 80px;
-
-  ${Container}
+  width: 100%;
 `;
 
 export const NavLogo = styled(Link)`
@@ -34,6 +34,19 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   display: flex;
   align-items: center;
+`;
+
+
+export const Logo = styled.img`
+  padding-left: 50px;
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-height: 50px;
+  @media screen and (max-width: 960px) {
+    padding-left: 30px;
+  }
 `;
 
 // export const NavIcon = styled(FaMagento)`
@@ -56,9 +69,11 @@ export const MobileIcon = styled.div`
 
 export const NavMenu = styled.ul`
   display: flex;
+  padding-right: 50px;
   align-items: center;
   list-style: none;
   text-align: center;
+  justify-content: flex-end;
 
   @media screen and (max-width: 960px) {
     display: flex;

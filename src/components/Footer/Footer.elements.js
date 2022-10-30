@@ -105,7 +105,7 @@ export const FooterLinkItems = styled.div`
 
 export const FooterLinkTitle = styled(Link)`
   color: #fff;
-  font-size: 2em;
+  font-size: 20px;
   text-decoration: none;
   margin-bottom: 0.5rem;
 
@@ -158,6 +158,16 @@ export const SocialLogo = styled(Link)`
 export const SocialIcon = styled(FaMagento)`
   margin-right: 10px;
 `;
+
+export const Logo = styled.img`
+  padding-right: 0;
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-height: 50px;
+`;
+
 
 export const WebsiteRights = styled.small`
   color: #C48300;

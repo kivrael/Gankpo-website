@@ -12,8 +12,10 @@ import {
   NavItem,
   NavItemBtn,
   NavLinks,
-  NavBtnLink
+  NavBtnLink,
+  Logo
 } from './Navbar.elements';
+import LogoImg from '../../images/logo_gankpo_seul.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -42,8 +44,9 @@ function Navbar() {
         <Nav>
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
+              <Logo src={LogoImg} alt='Gankpo' />
               {/* <NavIcon /> */}
-              GANKPO
+              {/* GANKPO */}
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -51,7 +54,7 @@ function Navbar() {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to='/' onClick={closeMobileMenu}>
-                  Qui Sommes-nous ?
+                  À propos
                 </NavLinks>
               </NavItem>
               <NavItem>

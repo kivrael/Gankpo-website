@@ -2,21 +2,26 @@ import React from 'react';
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour, homeObjFive } from './Data';
 import { InfoSection, Pricing } from '../../components';
 import HeroSection from '../../components/HeroSection';
-import Slideshow from '../../components/Slideshow'
+// import Slideshow from '../../components/Slideshow'
 import TextSection from '../../components/TextSection/TextSection';
 import { Linebreak } from '../../globalStyles';
 import Marquee from '../../components/Marquee';
+import AboutSection from '../../components/AboutSection';
+import LandingSection from '../../components/LandingSection';
 
 function Home() {
   return (
     <>
-      <HeroSection/>
       <Linebreak/>
-      <InfoSection {...homeObjOne} />
+      <LandingSection/>
+      <AboutSection/>
+      {/* <HeroSection/> */}
+      <Linebreak/>
+      {/* <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjFour} />
-      <InfoSection {...homeObjFive} />
+      <InfoSection {...homeObjFive} /> */}
       <Marquee/>
       {/* <TextSection /> */}
       {/* <Slideshow/> */}
