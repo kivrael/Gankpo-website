@@ -1,9 +1,9 @@
 import React from 'react';
 import GlobalStyle from './globalStyles';
 import Home from './pages/HomePage/Home';
-import Services from './pages/Services/Services';
-import Products from './pages/Products/Products';
-import SignUp from './pages/SignUp/SignUp';
+import Booking from './pages/Booking/Booking';
+import ContactSection from './pages/Contact/Contact';
+import Boutique from './pages/Boutique/Boutique';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { Navbar, Footer } from './components';
@@ -18,9 +18,9 @@ function App() {
       <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />
-        <Route path='/services' component={Services} />
-        <Route path='/products' component={Products} />
-        <Route path='/sign-up' component={SignUp} />
+        <Route path='/booking' component={Booking} />
+        <Route path='/contact' component={ContactSection} />
+        <Route path='/boutique' component={Boutique} />
       </Switch>
       <Footer />
     </Router>

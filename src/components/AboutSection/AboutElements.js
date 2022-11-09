@@ -14,7 +14,9 @@ export const AboutContainer = styled.div`
 export const BackgroundContainer = styled.div`
   max-width: 840px;
   background-color: #202020;
-  padding: 16px
+  padding: 16px;
+  border-radius: 10px;
+
 `
 
 export const TopLine = styled.div`
