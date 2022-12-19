@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nom": "Tshirt",
+        "prix": 14.99,
+        "imgUrl": "/imgs/tshirt.jpg" 
+    },
+    {
+        "id": 2,
+        "nom": "Casquette",
+        "prix": 5.99,
+        "imgUrl": "/imgs/casquette.jpg"
+    }
+]
