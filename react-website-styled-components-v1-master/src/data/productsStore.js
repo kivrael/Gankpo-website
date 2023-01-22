@@ -25,7 +25,7 @@ const productsArray = [
         id: "price_1M8Nb0FdXSlraEJ4nwIc80l8",
         nom: "Mug",
         prix: "7.99",
-        imgUrl: "/imgs/casquette.jpg"
+        imgUrl: "/imgs/mug.jpg"
     }
 ]
 

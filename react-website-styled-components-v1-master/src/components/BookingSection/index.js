@@ -6,7 +6,7 @@ import { BookingContainer, BackgroundContainer, Heading, Subtitle, TopLine, Img,
 
 const BookingSection = () => {
 
-    const [toggle,setToggle] = useState(0)
+    const [toggle,setToggle] = useState(1)
 
     const showArtist = () => {
         setToggle(1)
@@ -23,7 +23,7 @@ const BookingSection = () => {
             <TopLine>Booking</TopLine>
             <Heading>
                 <Option state={toggle} onClick={showArtist}>Catalogue Artistes</Option>
-                <Option state={1-toggle} onClick={showVenue}>Catalogue Lieux Culturels</Option>    
+                {/* <Option state={1-toggle} onClick={showVenue}>Catalogue Lieux Culturels</Option>     */}
             </Heading>
 
             <Subtitle>

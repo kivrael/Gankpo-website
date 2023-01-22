@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { FaMagento } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Container } from '../../globalStyles';
+import { Dropdown, Menu } from 'antd';
+const { SubMenu, Item } = Menu;
+
+
 
 export const Nav = styled.nav`
   font-family: 'Encode Sans Expanded';
@@ -90,6 +94,39 @@ export const NavMenu = styled.ul`
   }
 `;
 
+export const StyledMenu = styled(Menu)`
+  background: #000;
+  font-size: 25;
+  color: #ffd500;
+  padding-top: 24px;
+  margin-right: 10px;
+  font-family: 'Sagonabook';
+  .ant-select-item {
+     color: red;
+  }
+  width: 50vw;//1200px;
+  height: 95px;
+  font-size: 20px;
+  justify-content: end;
+  .Item {
+    color: #000;
+    &:hover {
+    border-bottom: 2px solid #FFAB00;
+  }
+  }
+  .ant-menu-item-selected.customclass {
+  background-color: green; /*Overriden property*/
+}
+`
+
+
+export const StyledItem = styled(Item)`
+  :hover {
+    border-bottom: 3px solid #FFAB00;
+  }
+`
+
+
 export const NavItem = styled.li`
   font-family: 'Encode Sans Expanded';
   height: 80px;
@@ -108,6 +145,13 @@ export const NavItem = styled.li`
   }
 `;
 
+export const DropDownItem = styled.li`
+  font-family: 'Encode Sans Expanded';
+  height: 80px;
+  border-bottom: 2px solid transparent;
+  color: #ffd500;
+`
+
 export const NavItemBtn = styled.li`
   @media screen and (max-width: 960px) {
     display: flex;
@@ -120,11 +164,12 @@ export const NavItemBtn = styled.li`
 
 export const NavLinks = styled(Link)`
   color: #ffd500;
+
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
+  /* padding: 0.5rem 1rem; */
+  /* height: 100%; */
   &:hover {
       color: #252C7B;
 

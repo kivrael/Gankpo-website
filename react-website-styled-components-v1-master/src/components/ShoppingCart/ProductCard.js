@@ -16,6 +16,8 @@ function ProductCard(props) {
             <Card.Body>
                 <Card.Title>{product.nom}</Card.Title>
                 <Card.Text>{product.prix}€</Card.Text>
+                <img class="card-img-top" height="400" src={product.imgUrl}></img>
+                <br></br><br></br>
                 { productQuantity > 0 ? 
                 <>
                     <Form as={Row}>

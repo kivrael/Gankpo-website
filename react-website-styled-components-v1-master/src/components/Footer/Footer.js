@@ -80,7 +80,7 @@ function Footer() {
             <FooterLink to='/'>Catalogue Artistes</FooterLink>
             <FooterLink to='/'>Catalogue Lieux Culturels</FooterLink>
           </FooterLinkItems>
-          <FooterLinkItems>
+          {/* <FooterLinkItems>
             <FooterLinkTitle>Boutique</FooterLinkTitle>
             <FooterLinkTitle>Tarification</FooterLinkTitle>
             <FooterLinkTitle>Réseaux Sociaux</FooterLinkTitle>
@@ -88,7 +88,7 @@ function Footer() {
             <FooterLink to='/'>Facebook</FooterLink>
             <FooterLink to='/'>Youtube</FooterLink>
             <FooterLink to='/'>Twitter</FooterLink>
-          </FooterLinkItems>
+          </FooterLinkItems> */}
         </FooterLinksWrapper>
       </FooterLinksContainer>
       <SocialMedia>
