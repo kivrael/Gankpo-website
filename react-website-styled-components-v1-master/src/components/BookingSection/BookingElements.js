@@ -31,7 +31,7 @@ export const TopLine = styled.div`
 `;
 
 
-export const Heading = styled.h1`
+export const Toggle = styled.h1`
   display: flex;
   justify-content: space-between;
   margin-bottom: -15px;
@@ -49,8 +49,6 @@ export const Option = styled.div`
   font-size: 25px;
   line-height: 1.1;
   font-weight: 300;
-
-
 
   :hover{
     background-color: #FFAB00;

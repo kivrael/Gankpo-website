@@ -37,8 +37,8 @@ function App() {
           <Route path='/achat' component={Success} />
           <Route path='/annulation' component={Cancel} />
           <Route path='/about' component={About}/>
-          <Route path='/future' component={Future}/>
-          <Route path='/past' component={Past}/>
+          {/* <Route path='/future' component={Future}/> */}
+          <Route path='/agenda' component={Past}/>
           <Route path='/photos' component={Photos}/>
           <Route path='/videos' component={Videos}/>
           <Route path='/articles' component={Articles}/>

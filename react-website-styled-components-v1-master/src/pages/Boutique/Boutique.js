@@ -9,6 +9,9 @@ import { productsArray } from "../../data/productsStore"
 import ProductCard from '../../components/ShoppingCart/ProductCard';
 import { Modal } from 'react-bootstrap'
 import { useState } from 'react'
+import styled from "styled-components";
+
+
 
 function Boutique() {
   const [ show, setShow ] = useState(false);
@@ -16,8 +19,20 @@ function Boutique() {
   const handleShow = () => setShow(true);
 
 
+  const BoutiqueContainer = styled.div`
+  background-color: #000;//696969;
+  color: #fff;
+  /* padding-top: 50px; */
+  //16px;
+  padding-left: 15%;
+  padding-right: 10%;
+  /* display: flex; */
+  /* justify-content: center; */
+`
+
+
   return (
-    <Container>
+    <BoutiqueContainer>
       <h1 align="center" className="p-3">Boutique</h1>
       <Row xs={1} md={3} className="g-4">
         {productsArray.map((product,idx) => (
@@ -27,7 +42,7 @@ function Boutique() {
         ))}
       </Row> 
 
-    </Container>
+    </BoutiqueContainer>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { Button } from '../../globalStyles';
@@ -105,104 +106,6 @@ function Navbar() {
 
   window.addEventListener('resize', showButton);
 
-
-  // const items = [
-  //   {
-  //     key: '1',
-  //     label: (
-  //       <NavLinks 
-  //       style={{  color: '#ffd500',
-  //         height: 20, fontSize: 18 }} 
-  //       to='/booking' onClick={closeMobileMenu}>
-  //       Booking
-  //     </NavLinks>
-  //     ),
-  //   },
-  //   {
-  //     key: '2',
-  //     label: (
-  //       <NavLinks 
-  //       style={{  color: '#ffd500',
-  //         height: 30, fontSize: 18 }} 
-  //       to='/booking' onClick={closeMobileMenu}>
-  //       passé À
-  //     </NavLinks>
-  //     ),
-  //   },
-  // ];
-
-  // const item = [
-  //   {
-  //     key: '3',
-  //     label: (
-  //       <NavLinks 
-  //       style={{ color: '#ffd500',
-  //         height: 30, fontSize: 18 }} 
-  //       to='/' onClick={closeMobileMenu}>
-  //       Passes
-  //     </NavLinks>
-  //     )
-  //   }
-  // ];
-
-  // const MenuItems = [
-  //   {
-  //     label: 'Navigation One',
-  //     key: 'mail',
-  //   },
-  //   {
-  //     label: 'Navigation Two',
-  //     key: 'app',
-  //     disabled: true,
-  //   },
-  //   {
-  //     label: 
-  //     <NavItem>
-  //     Navigation Three - Submenu
-  //     </NavItem>,
-  //     key: 'SubMenu',
-  //     children: [
-  //       {
-  //         type: 'group',
-  //         label: 'Item 1',
-  //         children: [
-  //           {
-  //             label: 'Option 1',
-  //             key: 'setting:1',
-  //           },
-  //           {
-  //             label: 'Option 2',
-  //             key: 'setting:2',
-  //           },
-  //         ],
-  //       },
-  //       {
-  //         type: 'group',
-  //         label: 'Item 2',
-  //         children: [
-  //           {
-  //             label: 'Option 3',
-  //             key: 'setting:3',
-  //           },
-  //           {
-  //             label: 'Option 4',
-  //             key: 'setting:4',
-  //           },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     label: (
-  //       <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-  //         Navigation Four - Link
-  //       </a>
-  //     ),
-  //     key: 'alipay',
-  //   },
-    
-  // ];
-
   return (
     <>
       <IconContext.Provider value={{ color: '#ffc000' }}>
@@ -226,10 +129,11 @@ function Navbar() {
         </Menu.Item>
         <SubMenu key="event" title={'Agenda'}>
             <Menu.Item key="event:1">
-              <NavLinks to='/future'>Événements à venir</NavLinks>
+              <NavLinks to={{pathname: '/agenda', state: 0}}>Événements à venir</NavLinks>
             </Menu.Item>
+            {/* <Menu.Item><Link to='/agenda' state={{toggle: 0}}>Événements à venir</Link></Menu.Item> */}
             <Menu.Item key="event:2">
-              <NavLinks to='/past'>Événements passés</NavLinks>
+              <NavLinks to={{pathname: '/agenda', state: 1}}>Événements passés</NavLinks>
             </Menu.Item>
         </SubMenu>
         <Menu.Item key="teach">
@@ -252,60 +156,8 @@ function Navbar() {
         <Menu.Item key="contact">
         <NavLinks to='/contact'>Contact</NavLinks>
         </Menu.Item>
-        {/* <SubMenu
-          title={
-            <span className="submenu-title-wrapper">
-              Navigation Three - Submenu
-            </span>
-          }
-        >
-          <Menu.ItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
-          </Menu.ItemGroup>
-          <Menu.ItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </Menu.ItemGroup>
-        </SubMenu> */}
-        {/* <Menu.Item key="alipay">
-          <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-            Navigation Four - Link
-          </a>
-        </Menu.Item> */}
       </StyledMenu>
 
-
-              {/* <Dropdown menu={{items}} 
-              placement="bottom">
-                  <NavItem>
-                    Hover me
-                  </NavItem>
-              </Dropdown> */}
-
-              {/* <NavItem>
-                <NavLinks to='/' onClick={closeMobileMenu}>
-                  À propos
-                </NavLinks>
-              </NavItem>
-
-              <StyledDropDown menu={{item}} 
-              placement="bottom">
-                  <NavItem>
-                    Événements
-                  </NavItem>
-              </StyledDropDown> */}
-
-              {/* <NavItem>
-                <NavLinks to='/booking' onClick={closeMobileMenu}>
-                  Booking
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/contact' onClick={closeMobileMenu}>
-                  Contact
-                </NavLinks>
-              </NavItem> */}
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to='/boutique'>
@@ -313,7 +165,6 @@ function Navbar() {
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to='/boutique'>
-                    {/*  fontBig primary*/}
                     <Button onClick={closeMobileMenu} 
                     fontBig primary>
                       Boutique

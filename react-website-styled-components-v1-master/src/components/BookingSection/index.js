@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { BookingContainer, BackgroundContainer, Heading, Subtitle, TopLine, Img, ImgWrapper, Section, Input, Button, Option } from './BookingElements'
+import { BookingContainer, BackgroundContainer, Toggle, Subtitle, TopLine, Img, ImgWrapper, Section, Input, Button, Option } from './BookingElements'
 
 
 
@@ -21,13 +21,13 @@ const BookingSection = () => {
     <BookingContainer>
         <BackgroundContainer>
             <TopLine>Booking</TopLine>
-            <Heading>
+            <Toggle>
                 <Option state={toggle} onClick={showArtist}>Catalogue Artistes</Option>
-                {/* <Option state={1-toggle} onClick={showVenue}>Catalogue Lieux Culturels</Option>     */}
-            </Heading>
+                <Option state={1-toggle} onClick={showVenue}>Catalogue Lieux Culturels</Option>    
+            </Toggle>
 
             <Subtitle>
-                <Section>Formulaire :</Section>
+                <Section>Formulaire :</Section>/collections
                 {toggle ? 
                 <ul>
                     <li>Nom du Groupe/Artiste :<Input/></li>

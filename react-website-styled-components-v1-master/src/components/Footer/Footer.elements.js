@@ -25,12 +25,12 @@ export const FooterSubscription = styled.section`
 export const FooterSubHeading = styled.p`
   font-family: 'Encode Sans Expanded'; //'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-bottom: 24px;
-  font-size: 24px;
+  font-size: 34px;
 `;
 
 export const FooterSubText = styled.p`
   margin-bottom: 24px;
-  font-size: 20px;
+  font-size: 10px;
 `;
 
 export const Form = styled.form`
@@ -50,7 +50,7 @@ export const FormInput = styled.input`
   margin-right: 10px;
   outline: none;
   border: none;
-  font-size: 16px;
+  font-size: 26px;
   border: 1px solid #fff;
 
   &::placeholder {
@@ -117,6 +117,7 @@ export const FooterLinkTitle = styled(Link)`
 
 export const FooterLink = styled(Link)`
   color: #fff;
+  font-size: 10px;
   text-decoration: none;
   margin-bottom: 0.5rem;
 

@@ -10,9 +10,16 @@ import {
     SlideTitle
 } from './LandingElements';
 
+// require("./.pdf")
+
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const sections = ["Infos du jour", "Dates/Événements à venir", "Promotions"]
-const delay = 2500;
+const photos = ['./Printemps1.jpg', './Printemps2.jpg', './Expo.jpg']
+require('./Printemps1.jpg')
+
+
+
+const delay = 5000;
 
 const LandingSection = () => {
   const [index, setIndex] = React.useState(0);
@@ -41,11 +48,24 @@ const LandingSection = () => {
 
   return (
     <LandingContainer>
-    <LandingTitle>Bandeau d'Accueil</LandingTitle>
+    {/* <LandingTitle></LandingTitle> */}
+    {/* <img src={require('./Printemps1.jpg')} alt={photos[0]}/> */}
     <SlideShow>
         <SlideShowSlider style={{ transform: `translate3d(${-index * 100}%, 0, 0)`}}>
-            {sections.map((text, index) => (
-                <Slide key={index}><SlideTitle>{text}</SlideTitle></Slide>
+            <img style={{maxWidth: '100%'}} src={require('./Printemps1.jpg')} alt={photos[0]}/>
+            <img style={{maxWidth: '100%'}} src={require('./Printemps2.jpg')} alt={photos[0]}/>
+            <img style={{maxWidth: '100%'}} src={require('./Expo.jpg')} alt={photos[0]}/>
+
+            {photos.map((source, index) => (
+              <>
+              {/* {require(source)} */}
+              <Slide key={index}><SlideTitle>{photos[index]}</SlideTitle>  
+              {/* {require(source)}               */}
+              <img style={{maxWidth: '100%'}}
+              src='./Printemps1.jpg' alt={index}/>
+                </Slide>
+              </>
+                
             ))}
         </SlideShowSlider>
     </SlideShow>
