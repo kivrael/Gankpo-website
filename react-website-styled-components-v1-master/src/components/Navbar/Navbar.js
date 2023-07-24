@@ -146,9 +146,9 @@ function Navbar() {
             <Menu.Item key="media:2">
               <NavLinks to='/videos'>Vidéos</NavLinks>
             </Menu.Item>
-            <Menu.Item key="media:3">
-              <NavLinks to='/articles'>Articles</NavLinks>
-            </Menu.Item>
+            // <Menu.Item key="media:3">
+            //   <NavLinks to='/articles'>Articles</NavLinks>
+            // </Menu.Item>
         </SubMenu>
         <Menu.Item key="book">
         <NavLinks to='/booking'>Booking</NavLinks>
